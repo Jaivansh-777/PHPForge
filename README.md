@@ -8,6 +8,7 @@ Created by **Jaivansh**, it allows users to write, test, validate, and run PHP c
 ## 🌐 Live Demo
 
 🔗 https://phpforge-1.onrender.com/
+🔗 https://www.phpforge.dpdns.org/
 
 ---
 
