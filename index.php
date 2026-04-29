@@ -874,11 +874,13 @@ echo "PHP Version: " . PHP_VERSION . "\n";
     const outputArea = document.getElementById('outputArea');
     const statusText = document.getElementById('statusText');
 
+    const op = '<' + '?php';
+    const cl = '?' + '>';
     const snippets = {
-        hello: '<?'+'php\necho "Hello, PHP Compiler by Jaivansh!\\n";\n$name = "Developer";\necho "Welcome, {$name}!\\n";\necho "PHP Version: " . PHP_VERSION . "\\n";\n?>',
-        array: '<?'+'php\n$fruits = ["apple", "banana", "cherry", "date"];\necho "Fruits:\\n";\nforeach($fruits as $fruit) {\n    echo "  - {$fruit}\\n";\n}\n?>',
-        loop:  '<?'+'php\necho "Numbers 1 to 5:\\n";\nfor($i = 1; $i <= 5; $i++) {\n    echo "  {$i}\\n";\n}\n?>',
-        func:  '<?'+'php\nfunction greet($name) {\n    return "Hello, {$name}!";\n}\necho greet("Jaivansh") . "\\n";\n?>'
+        hello: op + '\necho "Hello, PHP Compiler by Jaivansh!\\n";\necho "Welcome, Developer!\\n";\necho "PHP Version: " . PHP_VERSION . "\\n";\n' + cl,
+        array: op + '\n$fruits = ["apple", "banana", "cherry", "date"];\necho "Fruits:\\n";\nforeach($fruits as $fruit) {\n    echo "  - " . $fruit . "\\n";\n}\n' + cl,
+        loop:  op + '\necho "Numbers 1 to 5:\\n";\nfor($i = 1; $i <= 5; $i++) {\n    echo "  " . $i . "\\n";\n}\n' + cl,
+        func:  op + '\nfunction greet($name) {\n    return "Hello, " . $name . "!";\n}\necho greet("Jaivansh") . "\\n";\n' + cl
     };
 
     function showLoading() {
