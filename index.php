@@ -707,11 +707,7 @@ textarea.msg { min-height: 130px; resize: vertical; }
         <!-- Editor -->
         <div class="card">
             <div class="card-header">📝 Code Editor</div>
-            <textarea id="codeEditor"><?php
-echo "Hello, PHP Compiler by Jaivansh!\n";
-echo "Welcome to PHP Compiler!\n";
-echo "PHP Version: " . PHP_VERSION . "\n";
-?></textarea>
+            <textarea id="codeEditor"></textarea>
             <div class="snippets">
                 <button class="snippet-btn" data-code="hello">Hello World</button>
                 <button class="snippet-btn" data-code="array">Arrays</button>
@@ -947,9 +943,14 @@ echo "PHP Version: " . PHP_VERSION . "\n";
     const statusText = document.getElementById('statusText');
     const statusDot  = document.getElementById('statusDot');
 
+    // PHP tags split so PHP parser doesn't misinterpret them
+    const PHP_O = '<' + '?php';
+    const PHP_C = '?' + '>';
+
+    // Set default editor content safely via JS
+    editor.value = PHP_O + '\necho "Hello, PHP Compiler by Jaivansh!\\n";\necho "Welcome to PHP Compiler!\\n";\necho "PHP Version: " . PHP_VERSION . "\\n";\n' + PHP_C;
+
     // Code snippets
-    const PHP_O = '<?php';
-    const PHP_C = '?>';
     const SNIPPETS = {
         hello: PHP_O + '\necho "Hello, PHP Compiler by Jaivansh!\\n";\necho "Welcome, Developer!\\n";\necho "PHP Version: " . PHP_VERSION . "\\n";\n' + PHP_C,
         array: PHP_O + '\n$fruits = ["apple", "banana", "cherry", "date"];\necho "Fruits:\\n";\nforeach ($fruits as $fruit) {\n    echo "  - " . $fruit . "\\n";\n}\n' + PHP_C,
