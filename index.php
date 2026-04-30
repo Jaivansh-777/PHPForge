@@ -681,20 +681,7 @@ textarea.msg { min-height: 130px; resize: vertical; }
 </style>
 </head>
 <body>
-/*
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7390574521339742"
-     crossorigin="anonymous"></script>
-<!-- kij -->
-<ins class="adsbygoogle"
-     style="display:block"
-     data-ad-client="ca-pub-7390574521339742"
-     data-ad-slot="4318518562"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
-*/
+
 <!-- NAV -->
 <nav>
     <a href="?page=compiler" class="nav-brand">⚙ PHPForge</a>
