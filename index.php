@@ -1,12 +1,4 @@
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-1YDYK8DD1X"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'G-1YDYK8DD1X');
-</script> 
 <?php
 // PHP Compiler by Jaivansh - Stable Version with About, Contact, Privacy Pages
 
